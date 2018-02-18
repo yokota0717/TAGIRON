@@ -59,6 +59,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	root->insertAsChildPause(game);
 
 
+	//ƒƒCƒ“ƒ‹[ƒv
 	while (ProcessLoop() == 0) {
 
 		root->updateWithChildren();
