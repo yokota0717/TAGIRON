@@ -48,8 +48,13 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	Object* game = new Scene();
 	//テキスト
 	Object* play = new Text("GAME");
-
 	Object* logo = new test("./resource/graph/logo.png");
+
+	Object* tiles[5];
+	for (int i = 0; i < 5; ++i) {
+		tiles[i] = new Tile(i, Red, 100.0f + 80 * i, 470.0f);
+		game->insertAsChildPause(tiles[i]);
+	}
 
 	title->insertAsChild(logo);
 	game->insertAsChildPause(play);

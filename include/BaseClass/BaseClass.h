@@ -3,6 +3,7 @@
 #include "../define.h"
 #include "../Object/Object.h"
 #include "../Resource/Resource.h"
+#include "../Figure/Vec.h"
 #include <string>
 
 
@@ -63,4 +64,48 @@ public:
 	void renderSleep() {}
 	void renderDestroy() {}
 
+};
+
+	enum Color {
+		Red,
+		Blue,
+		Green,
+	};
+
+
+
+class Tile :public Object {
+public:
+	Vec pos;
+	int pic;		//‰æ‘œƒnƒ“ƒhƒ‹
+	int num;		//”š‚O`‚X
+	Color color;	//F@5‚Í—Î‚Ì‚İ
+
+	Tile(int, Color, float, float);
+
+	void update() {}
+	void updatePause() {}
+	void updateSleep() {}
+	void updateDestroy() {}
+
+	void render();
+	void renderPause() {}
+	void renderSleep() {}
+	void renderDestroy() {}
+
+};
+
+class Question :public Object {
+public:
+	int id;
+
+	void update() {}
+	void updatePause() {}
+	void updateSleep() {}
+	void updateDestroy() {}
+
+	void render() {}
+	void renderPause() {}
+	void renderSleep() {}
+	void renderDestroy() {}
 };
